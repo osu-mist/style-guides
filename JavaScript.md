@@ -1,6 +1,9 @@
 # JavaScript Style Guide
 
-This is a style guide for writing code in JavaScript. This includes all APIs created from the
+![Node.js](https://img.shields.io/badge/Node.js-10-brightgreen.svg)
+![ECMAScript](https://img.shields.io/badge/ECMAScript-6-yellow.svg)
+
+This is a style guide for writing code in JavaScript using Node.js. This includes all APIs created from the
 [Express API Skeleton](https://github.com/osu-mist/express-api-skeleton).
 
 ## Airbnb Style Guide
