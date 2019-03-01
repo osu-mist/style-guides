@@ -1,7 +1,4 @@
-# JavaScript Style Guide
-
-![Node.js](https://img.shields.io/badge/Node.js-10-brightgreen.svg)
-![ECMAScript](https://img.shields.io/badge/ECMAScript-6-yellow.svg)
+# JavaScript Style Guide ![Node.js](https://img.shields.io/badge/Node.js-10-brightgreen.svg) ![ECMAScript](https://img.shields.io/badge/ECMAScript-6-yellow.svg)
 
 This is a style guide for writing code in JavaScript using Node.js. This includes all APIs created from the
 [Express API Skeleton](https://github.com/osu-mist/express-api-skeleton).
@@ -89,7 +86,7 @@ const a = require('a');
 const appRoot = require('app-root-path');
 const b = require('b');
 
-const file = require('./file');
+const file1 = require('./file1');
 const file2 = require('./file2');
 
 const file3 = appRoot.require('dir/file3');
