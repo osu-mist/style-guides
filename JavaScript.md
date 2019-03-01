@@ -51,7 +51,7 @@ When listing more than 3 properties of an object, each property should be on its
 Example:
 
 ```js
-const obj = { prop1, prop2, prop3 };
+const obj1 = { prop1, prop2, prop3 };
 
 const obj2 = {
   prop1,
