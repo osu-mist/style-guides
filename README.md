@@ -5,3 +5,4 @@ This repository contains style guide documents for different languages/framework
 List of style guides:
 
 - [JavaScript](./JavaScript.md)
+- [OpenAPI/Swagger](./OpenAPI.md)
