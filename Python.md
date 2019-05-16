@@ -43,7 +43,12 @@ if (
 
 ## Imports
 
-In addition to the PEP 8 documentation, import statements should be ordered alphabetically
+PEP 8 specifies [three different import groups](https://www.python.org/dev/peps/pep-0008/#imports) each separated by a blank line:
+> 1. Standard library imports.
+> 2. Related third party imports.
+> 3. Local application/library specific imports.
+
+Within each of these groups, imports should be sorted alphabetically.
 
 Example:
 ```python3
