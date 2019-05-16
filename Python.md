@@ -40,3 +40,14 @@ if (
     do_stuff()
     do_some_other_stuff()
 ```
+
+## Imports
+
+In addition to the PEP 8 documentation, import statements should be ordered alphabetically
+
+Example:
+```python3
+import a
+import b
+from c import first_thing, second_thing, third_thing
+```
