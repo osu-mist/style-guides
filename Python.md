@@ -47,7 +47,13 @@ In addition to the PEP 8 documentation, import statements should be ordered alph
 
 Example:
 ```python3
-import a
-import b
-from c import first_thing, second_thing, third_thing
+import os
+import sys
+
+from requests import Session
+import yaml
+
+from local_module import first_thing, second_thing, third_thing
+import second_local_module
+import z_another_local_module
 ```
