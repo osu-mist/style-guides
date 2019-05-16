@@ -58,7 +58,7 @@ import sys
 from requests import Session
 import yaml
 
-from local_module import first_thing, second_thing, third_thing
-import second_local_module
+import local_module
+from second_local_module import first_thing, second_thing, third_thing
 import z_another_local_module
 ```
