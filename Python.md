@@ -4,7 +4,7 @@ This is a style guide for writing code in Python 3.
 
 ## Flake8 Style Guide
 
-As a base guide, the [Flake8 Style Guide](https://pypi.org/project/flake8/) should be followed.
+As a base guide, the [Flake8 Style Guide](http://flake8.pycqa.org/en/latest/) should be followed.
 
 > Note: Flake8 is a wrapper around the following linting tools:
 > * [PyFlakes](https://pypi.org/project/pyflakes/)
