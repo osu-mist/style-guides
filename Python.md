@@ -2,10 +2,14 @@
 
 This is a style guide for writing code in Python 3.
 
-## PEP 8 Style Guide
+## Flake8 Style Guide
 
-As a base guide, the [PEP 8 Style Guide](https://www.python.org/dev/peps/pep-0008/) should be followed.
-The [pycodestyle](https://pypi.org/project/pycodestyle/) style checker can be used to check this.
+As a base guide, the [Flake8 Style Guide](https://pypi.org/project/flake8/) should be followed.
+
+> Note: Flake8 is a wrapper around the following linting tools:
+> * [PyFlakes](https://pypi.org/project/pyflakes/)
+> * [pycodestyle](https://pypi.org/project/pycodestyle/)
+> * [Ned Batchelder’s McCabe script](https://pypi.org/project/mccabe/)
 
 ## Binary Operator Line Breaks
 
