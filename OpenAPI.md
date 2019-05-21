@@ -65,3 +65,85 @@ versions:
     type: string
     enum: ['2.1', v2] # only quote the necessary items in enum array
 ```
+
+## Result Object & Resource Object
+
+Besides the API specification, we also use the OpenAPI/Swagger file as a part of the API development and integrate it into the integration test. Mostly, it's used to compare the object schema, it's a good practice to always separate the result and resource object if possible.
+
+Example:
+
+```yaml
+definitions:
+  # Result object with a single resource
+  AccountBalanceResult:
+    properties:
+      links:
+        $ref: '#/definitions/SelfLink'
+      data:
+        $ref: '#/definitions/AccountBalanceResource'
+  AccountBalanceResource:
+    properties:
+      id:
+        $ref: '#/definitions/StudentId'
+      type:
+        type: string
+        enum: ['account-balance']
+      attributes:
+        properties:
+          currentBalance:
+            type: number
+            format: float
+            description: Current balance of student's account, in USD.
+            example: 2500.39
+      links:
+        $ref: '#/definitions/SelfLink'
+
+  # Result object with a list of resources
+  AcademicStatusResult:
+    properties:
+      links:
+        $ref: '#/definitions/SelfLink'
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/AcademicStatusResource'
+  AcademicStatusResource:
+    properties:
+      id:
+        $ref: '#/definitions/StudentAndTermId'
+      type:
+        type: string
+        enum: ['academic-status']
+      attributes:
+        properties:
+          academicStanding:
+            type: string
+            example: Good Standing
+            description: Academic standing
+            enum:
+              - 'Good Standing'
+              - 'Academic Dismissal - Graduate'
+              - 'Continued Deferred Suspension'
+              - 'Honor Roll'
+              - 'Academic Probation'
+              - 'Special Deferred Suspension'
+              - 'Academic Suspension'
+              - 'Deferred Suspension'
+              - 'Academic Warning'
+              - 'Reinstatement After Suspension'
+          term:
+            description: The term that this course was graded for.
+            type: string
+            example: '201901'
+          termDescription:
+            description: Description of the term.
+            type: string
+            example: 'Fall 2018'
+          gpa:
+            description: Grade point averages for the given term.
+            type: array
+            items:
+              $ref: '#/definitions/GradePointAverage'
+      links:
+        $ref: '#/definitions/SelfLink'
+```
