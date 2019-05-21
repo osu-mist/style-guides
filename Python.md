@@ -1,4 +1,4 @@
-# Python Style Guide
+# Python Style Guide ![python3](https://img.shields.io/badge/python-3-blue.svg)
 
 This is a style guide for writing code in Python 3.
 
