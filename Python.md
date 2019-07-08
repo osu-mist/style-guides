@@ -113,7 +113,7 @@ def sum(a: number, b: number) -> number:
 
 **Note**: Parameter types can also be placed on separate lines:
 
-```python3
+```
     :param a: The first number
     :type a: number
 ```
