@@ -119,3 +119,19 @@ def sum(a: number, b: number) -> number:
 ```
 
 but return types must be on a separate line using `:rtype`
+
+## Quoting Strings
+
+Strings should be single-quoted when possible. When single quotation marks are required in a string, the string should
+be double-quoted and the single quotation marks should be unescaped. When accessing a dictionary within an f-string,
+the string should be double-quoted and the dictionary keys should be single-quoted.
+
+### Examples
+
+```python3
+"A string with 'quoted examples'"
+```
+
+```python3
+f"{obj['prop_a']['prop_b']} and {obj_2['prop_c']} are values"
+```
