@@ -3,6 +3,41 @@
 This is a style guide for writing code in OpenAPI/Swagger using YAML. This includes all APIs created from the
 [Express API Skeleton](https://github.com/osu-mist/express-api-skeleton).
 
+## Filter Query Parameters
+
+Query parameters used for filtering data should appear in the following form:
+* `filter[<field>]=<value>`: if `field` and `value` are both a single value and the filter checks for
+  strict equality
+* `filter[<field>][<operation>]=<value>`: otherwise
+
+`field` is a semantic name for the field being used to filter the resources. If the field
+corresponds to an `attribute` of the resource, it should be named after this attribute if possible.
+`operation` refers to the operation being applied to filter the resources.
+
+Below is a list of allowed values for `operation`
+
+| `operation` | Description                                    |
+|-------------|------------------------------------------------|
+| `neq`       | Not equal to                                   |
+| `gt`        | Greater than                                   |
+| `gte`       | Greater than or equal to                       |
+| `lt`        | Less than                                      |
+| `lte`       | Less than or equal to                          |
+| `oneOf`     | `field` is one of the following                |
+| `some`      | `field` contains at least one of the following |
+| `all`       | `field` contains at least all of the following |
+| `fuzzy`     | `value` partially matches `field`              |
+
+### Examples
+
+* `filter[name]=John` - Matches all resources with name "John"
+* `filter[name][oneOf]=John,Alice,Bob` - Matches all resources with name "John", "Alice", or "Bob"
+* `filter[name][fuzzy]=Jo` - Matches all resources whose name partially equals "Jo" such as "Jo",
+  "Joe", or "John"
+* `filter[parkingSpaces][gte]=5` - Matches all resources with at least 5 parking spaces
+* `filter[amenities][some]=pond,pool` - Matches all resources that have a pond or a pool
+* `filter[amenities][all]=pond,pool` - Matches all resources that have a pond and a pool
+
 ## Quoting Conventions
 
 For most cases, it's not necessary to quote the value if the value can be parsed correctly with the defined type/format.
