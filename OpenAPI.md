@@ -16,19 +16,17 @@ corresponds to an `attribute` of the resource, it should be named after this att
 
 Below is a list of allowed values for `operation`
 
-| `operation` | Description                                    | `field` type | `value` type |
-|-------------|------------------------------------------------|--------------|--------------|
-| `neq`       | Not equal to                                   | `* \| *[]`   | `* \| *[]`   |
-| `gt`        | Greater than                                   | `number`     | `number`     |
-| `gte`       | Greater than or equal to                       | `number`     | `number`     |
-| `lt`        | Less than                                      | `number`     | `number`     |
-| `lte`       | Less than or equal to                          | `number`     | `number`     |
-| `oneOf`     | `field` is one of the following                | `*`          | `*[]`        |
-| `some`      | `field` contains at least one of the following | `*[]`        | `*[]`        |
-| `all`       | `field` contains at least all of the following | `*[]`        | `*[]`        |
-| `fuzzy`     | `value` partially matches `field`              | `string`     | `string`     |
-
-Note: `*` refers to any single-value type (`number`, `string`, `boolean`, ...)
+| `operation` | Description                                    |
+|-------------|------------------------------------------------|
+| `neq`       | Not equal to                                   |
+| `gt`        | Greater than                                   |
+| `gte`       | Greater than or equal to                       |
+| `lt`        | Less than                                      |
+| `lte`       | Less than or equal to                          |
+| `oneOf`     | `field` is one of the following                |
+| `some`      | `field` contains at least one of the following |
+| `all`       | `field` contains at least all of the following |
+| `fuzzy`     | `value` partially matches `field`              |
 
 ### Examples
 
