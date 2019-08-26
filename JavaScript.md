@@ -61,20 +61,23 @@ const obj2 = {
 };
 ```
 
-## Requiring Modules
+## Importing Modules
 
-### Require Statement Order
+ES6 imports are preferred over commonjs `require` statements. However, for some situations such as
+conditional imports, `require` should be used instead.
+
+### Import Order
 
 Whenever possible, the following should be grouped together, separated by a blank line at the top of a module in this
 order:
 
-1. Require an NPM package
+1. `import` a third-party module
 
-2. Require a local file
+2. `import` a local module
 
-3. Use a require-like method such as `app-root-path`'s require function
+3. `require` or use other method for importing module
 
-4. Declare global variables or call functions
+4. Declare global variables and/or call functions
 
 Each line within groups 1-3 should be ordered alphabetically by the first alphanumeric character in the name of the
 package/file in the statement.
@@ -82,15 +85,13 @@ package/file in the statement.
 Example:
 
 ```js
-const a = require('a');
-const appRoot = require('app-root-path');
-const b = require('b');
+import a from 'a';
+import b from 'b';
 
-const file1 = require('./file1');
-const file2 = require('./file2');
+import * as file1 from './file1';
+import { method } from './file2';
 
-const file3 = appRoot.require('dir/file3');
-const file4 = appRoot.require('dir/file4');
+const c = someCondition ? require('c') : null;
 
 const str = 'abc';
 ```
