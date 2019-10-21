@@ -17,15 +17,17 @@ corresponds to an `attribute` of the resource, it should be named after this att
 Below is a list of allowed values for `operation`
 
 | `operation` | Description                                    |
-|-------------|------------------------------------------------|
+| ----------- | ---------------------------------------------- |
 | `neq`       | Not equal to                                   |
 | `gt`        | Greater than                                   |
 | `gte`       | Greater than or equal to                       |
 | `lt`        | Less than                                      |
 | `lte`       | Less than or equal to                          |
 | `oneOf`     | `field` is one of the following                |
-| `some`      | `field` contains at least one of the following |
-| `all`       | `field` contains at least all of the following |
+| `noneOf`    | `field` is none of the following               |
+| `hasSome`   | `field` contains at least one of the following |
+| `hasAll`    | `field` contains all of the following          |
+| `hasNone`   | `field` contains none of the following         |
 | `fuzzy`     | `value` partially matches `field`              |
 
 ### Examples
