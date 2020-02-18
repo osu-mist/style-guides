@@ -103,6 +103,23 @@ versions:
     enum: ['2.1', v2] # only quote the necessary items in enum array
 ```
 
+Descriptions for abbreviated words, typically enum values, should use backticks (`) around the abbreviation.
+
+Example:
+
+```yaml
+citizen:
+  type: string
+  enum: [FN, N, R, S, C]
+  description: |
+    Person's citizen code
+    - `FN` - Foreign National
+    - `N` - Non Resident Alien
+    - `R` - Resident Alien
+    - `S` - Substantial Presence Alien
+    - `C` - Citizen
+```
+
 ## Result Object & Resource Object
 
 Besides the API specification, we also use the OpenAPI/Swagger file as a part of the API development and integrate it into the integration test. Mostly, it's used to compare the object schema, it's a good practice to always separate the result and resource object if possible.
