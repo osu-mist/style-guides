@@ -152,8 +152,8 @@ definitions:
       links:
         $ref: '#/definitions/SelfLink'
 
-  # Result object with a list of resources
-  AcademicStatusResult:
+  # Result object with a list of resources must have 'Set' in the name
+  AcademicStatusSetResult:
     properties:
       links:
         $ref: '#/definitions/SelfLink'
