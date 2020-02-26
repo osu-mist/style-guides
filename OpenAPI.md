@@ -62,12 +62,6 @@ termSeason:
   description: Season of the term
   example: Winter
   enum: [Fall, Winter, Summer, Spring]
-
-termStartDate:
-  type: string
-  description: First day of classes in this term. Format is in YYYY-MM-DD
-  format: date
-  example: 2019-01-07
 ```
 
 However, if the value can be parsed differently than the expected type, or the string contains special characters, the value should be quoted.
@@ -83,6 +77,12 @@ authorization:
   required: true
   type: string
   description: '"Bearer [token]" where [token] is your OAuth2 access token'
+
+termStartDate:
+  type: string
+  description: First day of classes in this term. Format is in YYYY-MM-DD
+  format: date
+  example: '2019-01-07'
 
 calendarYear:
   type: string
