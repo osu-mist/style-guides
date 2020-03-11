@@ -120,6 +120,33 @@ citizen:
     - `C` - Citizen
 ```
 
+## Line Length & Multiline Strings
+
+We will now be enforcing a maximum line length of 100 characters.
+YAML gives use three options for splitting multiline strings `|`, `>-`, and `>`.
+For our purposes we only use the first two `|` and `>-`.
+
+`|` should be used when line breaks in the string need to be **preserved**.
+```yaml
+sex:
+  type: string
+  nullable: true
+  enum: [M, F, N]
+  description: |
+    Person's sex code
+    - `M` - Male
+    - `F` - Female
+    - `N` - Non-specified
+```
+
+`>-` should be used when line breaks in the string should be **ignored**
+```yaml
+'409Post':
+  description: >-
+    The request body resource object's type was invalid or, if a
+    client-generated ID was used, a resource already exists with this ID
+```
+
 ## Result Object & Resource Object
 
 Besides the API specification, we also use the OpenAPI/Swagger file as a part of the API development and integrate it into the integration test. Mostly, it's used to compare the object schema, it's a good practice to always separate the result and resource object if possible.
