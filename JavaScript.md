@@ -80,7 +80,7 @@ order:
 4. Declare global variables and/or call functions
 
 Each line within groups 1-3 should be ordered alphabetically by the first alphanumeric character in the name of the
-package/file in the statement.
+package/file path in the statement.
 
 Example:
 
