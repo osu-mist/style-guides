@@ -127,3 +127,12 @@ or
 ```js
 const { c } = a.b;
 ```
+
+## Ternary Operators
+
+Multiline ternary operations should use the following indentation:
+```js
+query.primaryInd !== undefined
+  ? `AND ROW ${query.primaryInd ? "= 'Y'" : 'IS NULL'}`
+  : ''
+```
