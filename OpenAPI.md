@@ -37,8 +37,8 @@ Below is a list of allowed values for `operation`
 * `filter[name][fuzzy]=Jo` - Matches all resources whose name partially equals "Jo" such as "Jo",
   "Joe", or "John"
 * `filter[parkingSpaces][gte]=5` - Matches all resources with at least 5 parking spaces
-* `filter[amenities][some]=pond,pool` - Matches all resources that have a pond or a pool
-* `filter[amenities][all]=pond,pool` - Matches all resources that have a pond and a pool
+* `filter[amenities][hasSome]=pond,pool` - Matches all resources that have a pond or a pool
+* `filter[amenities][hasAll]=pond,pool` - Matches all resources that have a pond and a pool
 
 ## Quoting Conventions
 
